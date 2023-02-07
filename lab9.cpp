@@ -1,11 +1,24 @@
-// lab9.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Задано натуральне число. Створити стек з його цифр.
+
 
 #include <iostream>
 #include <stack>
 using namespace std;
 
-int digit(int n) {
+int digit(int n);
+
+int main()
+{
+    int n;
+    cout << "enter your number" << endl;
+    cin >> n;
+    digit(n);
+
+}
+
+int digit(int n)
+{
+    stack<int> stack;
     if (n == 0) {
         return 0;
     }
@@ -15,17 +28,4 @@ int digit(int n) {
         stack.push(dig);
         digit(dig);
     }
-
 }
-
-int main()
-{
-    stack<int> stack;
-    int n;
-    cout << "enter your number" << endl;
-    cin >> n;
-    digit(n);
-
-}
-
-
